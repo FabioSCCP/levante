@@ -1,0 +1,586 @@
+@charset "utf-8";
+
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Adicionando família de Fontes e Removendo as margens de todo o browser */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+/* Tornando todas as imagens responsivas */
+img { max-width: 100%; }
+
+/* Resetando margens e espaçamentos dos elementos especificados */
+h1, h2, h3, p, figure {
+    margin: 0;
+    padding: 0;
+} 
+/******************************************************************************/
+
+.desktop-header{
+    width: auto;
+    background-color: #D0CECE;
+    /*text-align: center;*/
+}
+
+.rectangle{
+    text-align: center;  
+    margin: auto;
+    max-width: 1100px;
+}
+
+nav {
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+nav a {
+    min-height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 23%;
+    color: #FFF;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 19px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.link-02-header{
+    width: auto;
+    height: 60px;
+    background-color: #C2BCBC;
+    align-items: center;
+}
+.link-02-header a{
+    display: table;
+    margin: auto;
+    width: 165px;
+    height: 60px;
+    padding: 18px;
+    color: #FFF;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Barra de Pesquisa */
+.busca{
+    background: url('../img/lupa.png') no-repeat;
+    padding: 5px 5px 5px 30px;
+    border: none;
+    width: 30px;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.3s linear;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.busca:focus{
+    width: 200px;
+    border-bottom: solid 1px #949494;
+    outline: none;
+    background-color: #F0F0F0;    
+}
+
+/* Banner Rotativo - Topo */
+.desktop-banner-topo-home{
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    justify-content: center;
+}
+#slider{
+    width: 100%;
+    height: 300px;
+    max-height: 300px;
+    position: relative;
+}
+#slider img{
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 500ms;
+}
+#slider img.selected{
+    opacity: 1;
+}
+
+/* Área desktop-home-carrossel */
+.desktop-home-carrossel{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    max-width: 90%;
+    margin: auto;
+    margin-top: 35px;
+}
+.destaque-a{
+    display: grid;
+    max-height: 270px;
+    background-color: #D8D8D8;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+}
+.destaque-a-text{
+    margin: auto;
+    color: #FFF;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 30px;
+    text-align: center;
+    padding: 50px 42px 0 42px;
+}
+.destaque-a-link{
+    margin: auto;
+    color: #FFF;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 30px;
+    text-align: center;
+}
+.cronometro{
+    grid-column: auto;
+    grid-row: auto;
+    background-color: #C2BCBC;
+    position: relative;
+    order: -1;
+    max-height: 350px;
+}
+.cronometro-interno-title{
+    display: grid;
+    padding-top: 41px;        
+}
+.cronometro-interno{
+    display: grid;
+    padding: 0 10px 10px 10px;
+    align-content: space-between;  
+    justify-content: center;      
+}
+.cronometro-title{
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+}
+.cronometro-n1, .cronometro-n2, .cronometro-n3, .cronometro-n4{
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+#cronometro-n1, #cronometro-n2, #cronometro-n3, #cronometro-n4{
+    color: #FFFFFF;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 48px;
+    padding-right: 10px;
+}
+.cronometro-interno p{
+    color: #FFFFFF;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: 24px;
+    text-align: left;
+}
+.destaque-bc{
+    display: grid;
+    grid-column: 1;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+}
+.destaque-b{
+    display: grid;
+    max-height: 230px;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    background-color: #D8D8D8;
+}
+.destaque-b-text{
+    margin: auto;
+    color: #FFF;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 30px;
+    text-align: center;
+    padding: 50px 42px 0 42px;
+}
+.destaque-b-link{
+    margin: auto;
+    color: #FFF;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 30px;
+    text-align: center;
+}
+.destaque-c{
+    display: grid;
+    max-height: 230px;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    background-color: #D8D8D8;
+}
+.destaque-c-text{
+    margin: auto;
+    color: #FFF;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 30px;
+    text-align: center;
+    padding: 50px 42px 0 42px;
+}
+.destaque-c-link{
+    margin: auto;
+    color: #FFF;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 30px;
+    text-align: center;
+}
+.destaque-a-icons, .cronometro-icons, .destaque-b-icons, .destaque-c-icons{
+    width: 100%;
+    height: 36px;
+    justify-content: space-around;
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #D0CECE;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#face{ width: 8px; height: 15px; }
+#twit{ width: 17px; height: 14px; }
+#insta{ width: 16px; height: 16px; }
+
+@media screen and (max-width: 380px) {
+    .cronometro-title{
+        font-size: 20px;
+    }
+    .cronometro-n1, .cronometro-n2, .cronometro-n3, .cronometro-n4{
+        padding-top: 10px;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    #cronometro-n1, #cronometro-n2, #cronometro-n3, #cronometro-n4{
+        font-size: 30px;
+        line-height: normal;
+    }
+    .cronometro-interno p{
+        font-size: 18px;
+        padding: 0 5px 10px 5px;
+        line-height: normal;
+    }
+}
+
+/* Área desktop-banner-avon */
+.desktop-banner-avon{
+    background-color: #E6E5E5;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 35px;
+    
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;    
+}
+.avon-title{
+    font-size: 30px;
+    line-height: 43px;
+    letter-spacing: normal;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    flex: 25%;
+    padding: 10px;
+}
+.avon-text{
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: normal;
+    text-align: left;
+    color: #FFF;
+    padding: 10px 30px;
+    flex: 50%;
+}
+.avon-button{
+    flex: 25%;
+    padding: 10px;
+}
+.avon-button-1{
+    width: 188px;
+    height: 42px;
+    background-color: #BBB5B5;
+    font-size: 20px;
+    color: #FFF;
+    border: 1px solid #969292;
+    cursor: pointer;
+}
+.avon-button-1:hover{
+    box-shadow: 0 10px 14px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* Área desktop-carrossel-categorias */
+.desktop-carrossel-categorias{
+    max-width: 90%;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+.desktop-carrossel-categorias h2{
+    color: #BBB5B5;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 31px;
+    text-align: left;
+}
+.desktop-carrossel-categorias button{
+    color: #FFFFFF;
+    font-family: Helvetica;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 22px;
+    text-align: center;
+    padding: 10px 22px;
+    border: 2px solid #969292;
+    background-color: #D8D8D8;
+}
+.desktop-carrossel-categorias-buttons-2{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.desktop-carrossel-categorias-buttons-1{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Área desktop-home-postagens-recente */
+.desktop-home-postagens-recente{
+    max-width: 90%;
+    margin: auto;
+    margin-top: 55px;      
+}
+.desktop-home-postagens-recente h2{
+    color: #BBB5B5;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 31px;
+}
+.posts{
+    margin: auto;  
+    align-content: space-around;  
+    margin-top: 30px;
+}
+.post-01, .post-02, .post-03{
+    max-width: 100%;    
+    text-align: center;
+    margin-top: 30px;
+}
+#post-01, #post-02, #post-03{
+    max-width: 100%;
+    height: 280px;
+    background-color: #E6E5E5;
+}
+.post-01-text, .post-02-text, .post-03-text{
+    color: #BBB5B5;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 28px;
+    text-align: center;
+}    
+.post-01-link, .post-02-link, .post-03-link{        
+    color: #BBB5B5;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 19px;
+    text-align: center;
+}
+.btn-ver-tudo-div{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 38px;
+}
+.btn-ver-tudo{
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #969292;
+    background-color: #C2BCBC;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 22px;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+}
+.btn-ver-tudo:hover{
+    box-shadow: 0 10px 14px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* Área desktop-home-parceiros-01 */
+.desktop-home-parceiros-01{
+    max-width: 90%; 
+    max-height: 480px;      
+    background-color: #D8D8D8;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 55px;
+}
+.desktop-home-parceiros-01 h2{
+    color: #FFFFFF;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 31px;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+.parceiros-rectangle{
+    max-width: 90%;
+    margin: auto;
+    padding-top: 25px;
+    padding-bottom: 45px;    
+}
+.parceiros-rectangle div{
+    background-color: #E6E5E5;
+    height: 60px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* Área desktop-home-parceiros-02 */
+.desktop-home-parceiros-02{
+    max-width: 90%;
+    margin: auto;
+}
+.desktop-home-parceiros-02 h2{
+    color: #D8D8D8;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 30px;
+}
+.parceiros{
+    margin: auto;
+    justify-content: space-between;    
+}
+.parceiros-01, .parceiros-02, .parceiros-03, .parceiros-04{
+    margin-top: 5px;
+    text-align: center;
+}
+#parceiros-01, #parceiros-02, #parceiros-03, #parceiros-04{
+    max-width: 100%;
+    height: 250px;        
+    background-color: #C2BCBC;
+}
+.parceiros-01 h3, .parceiros-02 h3, .parceiros-03 h3, .parceiros-04 h3{
+    color: #D8D8D8;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 26px;
+    text-align: left;
+}
+.parceiros-01-text, .parceiros-02-text, .parceiros-03-text, .parceiros-04-text{
+    color: #D8D8D8;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 20px;
+    text-align: left;
+}
+
+/**************** FOOTER ****************/
+/* Área box-01 */
+.box-01{ 
+    height: 216px; 
+    background-color: #E6E5E5;
+    margin: auto;
+    margin-top: 64px;
+    justify-content: center;
+    align-items: center;
+}
+#box-01{
+    margin: auto;
+    width: 90%;        
+}    
+.realizacao, .apoio{
+    width: 90%;
+}
+.realizacao h3, .apoio h3{
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 24px;
+    padding-top: 10px;
+}
+.realizacao-01, .apoio-01{
+    margin: auto;
+    display: flex;
+    padding-top: 10px;
+    justify-content: space-between;
+}
+.realizacao-01 div, .apoio-01 div{
+    background-color: #D8D8D8;
+    height: 55px;
+}
+.box-02{    
+    height: 47px; 
+    background-color: #D0CECE;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+}
+#box-02{
+    width: 90%;
+    height: 27px;
+    color: #FFFFFF;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 17px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+#box-02 a{
+    color: #FFF;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+}
+#box-02 p{
+    font-size: 20px;        
+}
+.box-02-icons{
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

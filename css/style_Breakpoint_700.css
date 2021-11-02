@@ -1,0 +1,503 @@
+@charset "utf-8";
+
+/* 1o Breakpoint
+Media Query para telas a partir de 700px */
+
+@media screen and (min-width: 700px) {
+    .desktop-header {
+        width: 100%;
+        top: 0;
+        height: 60px;
+        z-index: 1000;
+    }
+    
+    .desktop-header div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    nav { width: 100%; }
+
+    /* Área desktop-home-carrossel */
+    .desktop-home-carrossel{
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        grid-gap: 15px;
+        max-width: 95%;
+        min-height: 400px;
+        margin: auto;
+        margin-top: 65px;
+    }
+    .destaque-a{
+        display: grid;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        max-height: 192.5px;
+        background-color: #D8D8D8;
+        justify-content: center;
+        align-content: center;
+        position: relative;
+    }
+    .destaque-a-text{
+        margin: auto;
+        color: #FFF;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 20px;
+        text-align: center;
+    }
+    .destaque-a-link{
+        margin: auto;
+        color: #FFF;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 30px;
+        text-align: center;
+        padding-top: 10px;
+    }
+    .cronometro{
+        display: grid;
+        grid-column: 2;
+        grid-row: 1 / 3;
+        min-height: 400px;
+        background-color: #C2BCBC;
+        position: relative;
+    }
+    .cronometro-interno-title{
+        display: grid;       
+    }
+    .cronometro-interno{
+        display: grid;
+        padding: 20px 10px 20px 20px;
+        align-content: space-between;        
+    }
+    .cronometro-title{
+        color: #FFFFFF;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 20px;
+        text-align: left;
+    }
+    .cronometro-n1, .cronometro-n2, .cronometro-n3, .cronometro-n4{
+        display: flex;
+        flex-direction: row;
+    }
+    #cronometro-n1, #cronometro-n2, #cronometro-n3, #cronometro-n4{
+        color: #FFFFFF;
+        font-size: 35px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 40px;
+    }
+    .cronometro-interno p{
+        color: #FFFFFF;
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: 18px;
+        text-align: left;
+    }
+    .destaque-bc{
+        display: grid;
+        grid-column: 1;
+        grid-template-columns: auto auto;
+        grid-gap: 15px;
+        max-height: 192.5px;
+        justify-content: space-between;        
+    }
+    .destaque-b{
+        display: grid;
+        max-width: 253px;
+        max-height: 192.5px;
+        background-color: #D8D8D8;
+        justify-content: center;
+        align-content: center;
+        position: relative;
+    }
+    .destaque-b-text{
+        margin: auto;
+        color: #FFFFFF;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 18px;
+        text-align: center;
+        padding: 20px 20px 0 20px;
+    }
+    .destaque-b-link{
+        margin: auto;
+        color: #FFF;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 30px;
+        text-align: center;
+        padding-top: 10px;
+    }
+    .destaque-c{
+        max-width: 160px;
+        max-height: 192.5px;
+        background-color: #D8D8D8;
+        position: relative;
+    }
+    .destaque-c-text{
+        margin: auto;
+        color: #FFFFFF;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 18px;
+        text-align: center;
+        padding: 20px 20px 0 20px;
+    }
+    .destaque-c-link{
+        margin: auto;
+        color: #FFF;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 30px;
+        text-align: center;
+        padding-top: 10px;
+    }
+    .destaque-a-icons, .cronometro-icons, .destaque-b-icons, .destaque-c-icons{
+        width: 91px;
+        height: 30px;
+        justify-content: space-around;
+        align-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #D0CECE;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    #face{ width: 8px; height: 15px; }
+    #twit{ width: 17px; height: 14px; }
+    #insta{ width: 16px; height: 16px; }
+
+    /* Área desktop-banner-avon */
+    .desktop-banner-avon{
+        background-color: #E6E5E5;
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+        margin-top: 55px;
+        max-width: 95%;
+        min-height: 130px;
+        display: flex;
+        flex-direction: row;
+        align-items: center; 
+    }
+    .avon-title{
+        font-size: 30px;
+        line-height: 35px;
+        letter-spacing: normal;
+        text-align: center;
+        color: #FFF;
+        font-weight: bold;
+        flex: 25%;
+        padding: 10px;
+    }
+    .avon-text{
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: normal;
+        text-align: left;
+        color: #FFF;
+        padding: 10px;
+        flex: 50%;
+    }
+    .avon-button{
+        flex: 25%;
+    }
+    .avon-button-1{
+        width: 150px;
+        height: 42px;
+        background-color: #BBB5B5;
+        font-size: 18px;
+        color: #FFF;
+        border: 1px solid #969292;
+        cursor: pointer;
+    }
+    .avon-button-1:hover{
+        box-shadow: 0 10px 14px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+    /* Área desktop-carrossel-categorias */
+    .desktop-carrossel-categorias{
+        max-width: 95%;
+        max-height: 140px;
+        margin: auto;
+        margin-top: 65px;
+        margin-bottom: 65px;
+        text-align: center;
+    }
+    .desktop-carrossel-categorias h2{
+        color: #BBB5B5;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 10px;
+        text-align: left;
+    }
+    .desktop-carrossel-categorias button{
+        color: #FFFFFF;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 15px;
+        text-align: center;
+        padding: 10px 22px;
+        border: 2px solid #969292;
+        background-color: #D8D8D8;
+    }
+    .desktop-carrossel-categorias-buttons-2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 60%;
+        margin: auto;
+    }
+    .desktop-carrossel-categorias-buttons-1{
+        display: flex;
+        
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 20px;
+        padding-bottom: 15px;
+    }
+
+    /* Área desktop-home-postagens-recente */
+    .desktop-home-postagens-recente{
+        max-width: 95%;
+        margin-top: 55px;
+        margin: auto;       
+    }
+    .desktop-home-postagens-recente h2{
+        color: #BBB5B5;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 10px;
+    }
+    .posts{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin: auto;
+        justify-content: space-between; 
+    }
+    .post-01, .post-02, .post-03{
+        max-width: 30%;
+        min-height: 300px;
+        text-align: center;
+    }
+    #post-01, #post-02, #post-03{
+        max-width: 100%;
+        height: 150px;   
+        background-color: #E6E5E5;
+    }
+    .post-01-text, .post-02-text, .post-03-text{
+        color: #BBB5B5;
+        font-size: 13px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 18px;
+        text-align: center;
+        padding: 10px 5px;
+    }    
+    .post-01-link, .post-02-link, .post-03-link{        
+        color: #BBB5B5;
+        font-size: 13px;
+        letter-spacing: 0;
+        line-height: 15px;
+        text-align: center;
+    }
+    .btn-ver-tudo-div{
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 38px;
+    }
+    .btn-ver-tudo{
+        box-sizing: border-box;
+        height: 48px;
+        width: 353px;
+        border: 2px solid #969292;
+        background-color: #C2BCBC;
+        color: #FFFFFF;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 22px;
+        text-align: center;
+        margin: auto;
+        cursor: pointer;
+    }
+    .btn-ver-tudo:hover{
+        box-shadow: 0 10px 14px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+    
+    /* Área desktop-home-parceiros-01 */
+    .desktop-home-parceiros-01{
+        max-width: 95%;
+        max-height: 260px;        
+        background-color: #D8D8D8;
+        margin: auto;
+        margin-top: 68px;
+        margin-bottom: 73px;
+    }
+    .desktop-home-parceiros-01 h2{
+        color: #FFFFFF;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 25px;
+    }
+    .parceiros-rectangle{
+        max-width: 90%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 5px;
+        padding-bottom: 15px;
+        justify-content: space-around;
+    }
+    .parceiros-rectangle div{
+        background-color: #E6E5E5;
+        height: 40px;
+    }
+
+    /* Área desktop-home-parceiros-02 */
+    .desktop-home-parceiros-02{
+        max-width: 95%;
+        height: 300px;
+        margin-top: 73px;
+        margin: auto;
+    }
+    .desktop-home-parceiros-02 h2{
+        color: #D8D8D8;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 10px;
+    }
+    .parceiros{
+        display: flex;
+        flex-wrap: nowrap;
+        margin: auto;
+        justify-content: space-between;
+        margin-top: 20px;      
+    }
+    .parceiros-01, .parceiros-02, .parceiros-03, .parceiros-04{
+        max-width: 23%;
+        max-height: 330px;
+        text-align: center;
+    }
+    #parceiros-01, #parceiros-02, #parceiros-03, #parceiros-04{
+        max-width: 100%;
+        height: 150px;        
+        background-color: #C2BCBC;
+    }
+    .parceiros-01 h3, .parceiros-02 h3, .parceiros-03 h3, .parceiros-04 h3{
+        color: #D8D8D8;
+        font-family: Helvetica;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 16px;
+        text-align: left;
+        padding: 10px 0;
+    }
+    .parceiros-01-text, .parceiros-02-text, .parceiros-03-text, .parceiros-04-text{
+        color: #D8D8D8;
+        font-family: Helvetica;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 16px;
+        text-align: left;
+    }
+
+    /**************** FOOTER ****************/
+    /* Área box-01 */
+    .box-01{    
+        height: 116px; 
+        background-color: #E6E5E5;
+        margin: auto;
+        margin-top: 64px;
+        justify-content: center;
+        align-content: flex-start;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #box-01{
+        max-width: 95%;
+        max-height: 86px;
+        margin: auto;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+    }    
+    .realizacao{
+        width: 45%;
+        justify-content: space-between;   
+    }
+    .apoio{
+        width: 45%;
+        justify-content: space-between;
+    }
+    .realizacao h3, .apoio h3{
+        color: #FFFFFF;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 20px;
+    }
+    .realizacao-01, .apoio-01{
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .realizacao-01 div, .apoio-01 div{
+        background-color: #D8D8D8;
+        max-width: 90px;
+        max-height: 60px;
+    }
+    .box-02{    
+        height: 47px; 
+        background-color: #D0CECE;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    #box-02{
+        width: 60%;
+        height: 27px;
+        color: #FFFFFF;
+        font-size: 10px;
+        letter-spacing: 0;
+        line-height: 10px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #box-02 a{
+        color: #FFF;
+        text-decoration: none;
+        cursor: pointer;
+        outline: none;
+    }
+    #box-02 p{
+        font-size: 20px;        
+    }
+    .box-02-icons{
+        width: 15%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+ 
+}
